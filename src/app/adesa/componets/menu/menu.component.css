@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+.navbarI {
+  @apply grid grid-cols-12 bg-sky-950 h-20 text-white items-center;
+}
+
+.navbarI-start {
+  @apply col-span-2;
+}
+
+.navbarI-center {
+  @apply col-span-8 justify-between mx-auto;
+}
+
+.navbarI-end {
+  @apply col-span-2;
+}
+
+.navItem {
+  @apply p-4 text-center cursor-pointer transition-transform duration-300 hover:scale-110;
+}

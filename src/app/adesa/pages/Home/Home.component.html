@@ -1,0 +1,78 @@
+<div>
+  <h1>Hola mundo Home</h1>
+  <button (click)="onLogout()" class="btn text-white bg-sky-800 border-none">Cerrar sesion</button>
+  <section class="grid grid-cols-12 p-4 gap-5">
+    <!-- Signal INFO -->
+    <div class="col-span-6">
+      <h1 class="col-span-6 text-sky-800 font-semibold text-3xl pb-3">¿Qué es una Signal?</h1>
+      <p>Una Signal es básicamente una caja reactiva que guarda un valor.</p>
+      <div class="pl-10">
+        <li>Cuando el valor cambia, Angular detecta automáticamente el cambio.</li>
+        <li>
+          Los componentes o plantillas que usan esa signal se vuelven a renderizar solo cuando es
+          necesario, sin tener que disparar ChangeDetection completo.
+        </li>
+      </div>
+    </div>
+    <!-- CODE component.ts -->
+    <div class="col-span-6 mockup-code w-full bg-sky-950">
+      <pre data-prefix=">" class="text-success"><code>component.ts</code></pre>
+      <pre data-prefix=">"><code>n1 = signal(0);</code></pre>
+      <pre data-prefix=">"><code>n2 = signal(0);</code></pre>
+      <pre data-prefix=">"><code>result = computed(() => this.n1() * this.n2());</code></pre>
+    </div>
+    <!-- Web Page -->
+    <div class="col-span-6">
+      <div class="mockup-browser border-base-300 border w-full mt-5">
+        <div class="mockup-browser-toolbar">
+          <div class="input">https://adesaa.com</div>
+        </div>
+        <div class="m-5 grid grid-cols-12 gap-5">
+          <input
+            class="col-span-6 border-2 rounded-md p-1 border-b-slate-700"
+            type="numbre"
+            placeholder="Ingresa un numero"
+            [ngModel]="n1()"
+            (ngModelChange)="n1.set($event)"
+          />
+          <input
+            class="col-span-6 border-2 rounded-md p-1 border-b-slate-700"
+            type="numbre"
+            placeholder="Ingresa un numero"
+            [ngModel]="n2()"
+            (ngModelChange)="n2.set($event)"
+          />
+          <label class="col-span-12 text-center" for=""
+            >Resultado con signal computed: {{ result() }}</label
+          >
+        </div>
+      </div>
+    </div>
+    <!-- CODE component.html -->
+    <div class="col-span-6 mockup-code w-full bg-sky-950">
+      <pre data-prefix=">" class="text-success"><code>componet.html</code></pre>
+      <pre data-prefix=">"><code>&lt;input</code></pre>
+      <pre data-prefix=">"><code>  [ngModel]="n1()"</code></pre>
+      <pre data-prefix=">"><code>  (ngModelChange)="n1.set($event)"</code></pre>
+      <pre data-prefix=">"><code>/&gt;"</code></pre>
+      <pre data-prefix=">"><code>&lt;input</code></pre>
+      <pre data-prefix=">"><code>  [ngModel]="n2()"</code></pre>
+      <pre data-prefix=">"><code>  (ngModelChange)="n2.set($event)"</code></pre>
+      <pre data-prefix=">"><code>/&gt;"</code></pre>
+      <pre
+        data-prefix=">"
+      ><code ngNonBindable>&lt;label&gt; {{ result() }} &lt;/label&gt;</code></pre>
+    </div>
+    <!-- Signal INFO -->
+    <div class="col-span-6">
+      <p>Una Signal es básicamente una caja reactiva que guarda un valor.</p>
+      <div class="pl-10">
+        <li>Cuando el valor cambia, Angular detecta automáticamente el cambio.</li>
+        <li>
+          Los componentes o plantillas que usan esa signal se vuelven a renderizar solo cuando es
+          necesario, sin tener que disparar ChangeDetection completo.
+        </li>
+      </div>
+    </div>
+  </section>
+</div>
