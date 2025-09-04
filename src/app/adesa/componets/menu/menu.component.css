@@ -1,7 +1,11 @@
 @import 'tailwindcss';
 
+.logo-menu {
+  @apply h-16;
+}
+
 .navbarI {
-  @apply grid grid-cols-12 bg-sky-950 h-20 text-white items-center;
+  @apply grid grid-cols-12 bg-sky-950 h-24 text-white items-center;
 }
 
 .navbarI-start {

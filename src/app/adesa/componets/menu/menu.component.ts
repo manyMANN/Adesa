@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 @Component({
   selector: 'menu',
   imports: [],
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
-  logo = '../../../img/logo/iconoadesablanco.png'
+  logo = 'assets/img/logo/iconoadesablanco.png'
 }
